@@ -1,4 +1,4 @@
-1. We will adhere to the Standard Interruption Protocol
+    1. We will adhere to the Standard Interruption Protocol
 
     2. We will have all conversations in the open
 
