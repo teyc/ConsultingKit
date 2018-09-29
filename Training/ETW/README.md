@@ -7,6 +7,10 @@ logman start demo -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct
 note: `{e13c0d23-ccbc-4e12-931b-d9cc2eee27e4}` refers to .NET Common Language Runtime, 
 `0x1CCBD` is a magic number, and `0x5` represents VERBOSE.
 
+```
+logman stop demo -ets
+```
+
 ## Troubleshooting ETW
 
 Is .NET ETW providers registered?
@@ -20,3 +24,6 @@ ASP.NET Events                           {AFF081FE-0247-4275-9C4E-021F3DC1DA35}
 
 If they are missing register providers with [wevtutil](https://docs.microsoft.com/en-us/dotnet/framework/performance/controlling-logging)
 
+## Reference
+
+https://sddconf.com/brands/sdd/library/ETW.pdf
