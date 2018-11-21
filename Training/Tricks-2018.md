@@ -57,7 +57,7 @@
        
        nswag.cmd swagger2tsclient /input:BFLoggingDemo.Api.json /output:BFLoggingDemo.Api.ts
        
-       
+       nswag.cmd swagger2csclient /input:BFLoggingDemo.Api.json /output:BFLoggingDemo.Api.Client.cs /namespace:BFLoggingDemo.Api.Client
 
 2. Windows workflow playing guess
 
