@@ -69,7 +69,9 @@
 
 # Docker
 
-1. Attach to docker
+1. You can run more than 1 process in a single container.
+
+       docker exec -it c08d92 /bin/bash
 
 2. curl from docker
 
