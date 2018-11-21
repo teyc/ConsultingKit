@@ -59,6 +59,10 @@
        
        nswag.cmd swagger2csclient /input:BFLoggingDemo.Api.json /output:BFLoggingDemo.Api.Client.cs /namespace:BFLoggingDemo.Api.Client
 
+2. Multitarget NETStandard
+
+   <img src="Tricks-2018/MultitargetNETStandard.png" />
+   
 2. Windows workflow playing guess
 
 3. Hangfire
