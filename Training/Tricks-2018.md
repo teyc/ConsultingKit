@@ -27,31 +27,37 @@
 
 2. `Get-PSDrive`
 
-      PS C:\ctey\temp\a> get-psdrive
+        PS C:\ctey\temp\a> get-psdrive
 
-      Name           Used (GB)     Free (GB) Provider      Root
-      ----           ---------     --------- --------      ----
-      Alias                                  Alias
-      C                 162.36         76.12 FileSystem    C:\
-      Cert                                   Certificate   \
-      D                                      FileSystem    D:\
-      Env                                    Environment
-      Function                               Function
-      H                -332.44        333.44 FileSystem    \\aubriprfil06\homefolders$\ctey
-      HKCU                                   Registry      HKEY_CURRENT_USER
-      HKLM                                   Registry      HKEY_LOCAL_MACHINE
-      P                 144.97         25.02 FileSystem    \\maau.group\Corporate\Applications
-      R                2974.40        425.47 FileSystem    \\maau.group\corporate\roles
-      Variable                               Variable
-      WSMan                                  WSMan
-      X                2974.40        425.47 FileSystem    \\maau.group\Corporate\Common
+        Name           Used (GB)     Free (GB) Provider      Root
+        ----           ---------     --------- --------      ----
+        Alias                                  Alias
+        C                 162.36         76.12 FileSystem    C:\
+        Cert                                   Certificate   \
+        D                                      FileSystem    D:\
+        Env                                    Environment
+        Function                               Function
+        H                -332.44        333.44 FileSystem    \\aubriprfil06\homefolders$\ctey
+        HKCU                                   Registry      HKEY_CURRENT_USER
+        HKLM                                   Registry      HKEY_LOCAL_MACHINE
+        P                 144.97         25.02 FileSystem    \\maau.group\Corporate\Applications
+        R                2974.40        425.47 FileSystem    \\maau.group\corporate\roles
+        Variable                               Variable
+        WSMan                                  WSMan
+        X                2974.40        425.47 FileSystem    \\maau.group\Corporate\Common
 
 3. `(gci).Name` short hand for `gci | % { $_.Name }`
 
 
 # C#
 
-1. `NSwag.exe yourWebApi.dll`
+1. NSwag
+
+       nswag.cmd webapi2swagger /assembly:.\Bin\BFLoggingDemo.Api.dll /output:BFLoggingDemo.Api.json
+       
+       nswag.cmd swagger2tsclient /input:BFLoggingDemo.Api.json /output:BFLoggingDemo.Api.ts
+       
+       
 
 2. Windows workflow playing guess
 
