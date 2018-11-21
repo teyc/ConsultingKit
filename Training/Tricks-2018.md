@@ -65,11 +65,22 @@
    
 2. Windows workflow playing guess
 
-3. Hangfire
+# Typescript
 
+1. Defining types with reflection https://stackoverflow.com/questions/52845900/typescript-conditional-mapped-types
+
+       type KnockoutType<T> = {
+           [K in keyof T]: T[K] extends Array<infer U> ? 
+             KnockoutObservableArray<U> : KnockoutObservable<T[K]>
+       }
+              
+       
 # Roadside tricks and tips
 
 1. $(".xyz").show()
+
+2. `ko.toJS()`
+
 
 # Docker
 
@@ -77,7 +88,6 @@
 
        docker exec -it c08d92 /bin/bash
 
-2. curl from docker
+2. Run SQL Server and Seq with docker
 
-3. docker MSSQL Server
 
