@@ -7,11 +7,19 @@ function Invoke-MSBuild
         
      )
 
-    $dotNetVersion = "14.0"
-    $regKey = "HKLM:\software\Microsoft\MSBuild\ToolsVersions\$dotNetVersion"
-    $regProperty = "MSBuildToolsPath"
+    $dotNetVersion = "15.0"
 
-    $msbuildExe = join-path -path (Get-ItemProperty $regKey).$regProperty -childpath "msbuild.exe"
+    If ($dotNetVersion -eq "15.0")
+    {
+        $msBuildDirectory = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\$dotNetVersion\bin"
+    }
+    Else
+    {
+        $regKey = "HKLM:\software\Microsoft\MSBuild\ToolsVersions\$dotNetVersion"
+        $regProperty = "MSBuildToolsPath"
+        $msBuildDirectory = (Get-ItemProperty $regKey).$regProperty
+    }
+    $msbuildExe = join-path -path $msBuildDirectory -childpath "msbuild.exe"
 
     &$msbuildExe $solutionFile /verbosity:minimal /p:Configuration=Release
 
