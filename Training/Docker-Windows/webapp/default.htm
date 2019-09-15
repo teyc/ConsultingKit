@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel in a container</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style type="text/css">
+
+        body {
+            margin: 0;
+        }
+
+        body * {
+            box-sizing: border-box;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            /* flex-direction: column; */
+        }
+
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./container.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; 
+            padding: 60px;           
+        }
+
+        .hero > * {
+            text-shadow: 4px 4px 4px #111;
+            color: aliceblue;
+        }
+
+        .hero h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 60px;
+            line-height: 60px;
+        }
+
+        label {
+            font-size: 30px;
+        }
+
+        form {
+            flex-direction: column;
+            width: 700px;
+            margin-left: -60px;
+            padding-left: 60px;
+            padding-right: 100px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        form input {
+            font-size: 26px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        input[type=submit] {
+            margin-top: 5px;
+            background-color: #6699ee;
+            color: white;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 36px;
+            -webkit-appearance: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .label-group {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <form action="/choose-dates" class="dates">
+
+            <h1>Travel around the world in a container</h1>
+
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" id="fullname" value="John Robinson" />
+
+            <label for="destination">Destination</label>
+            <input type="text" name="destination" id="destination" value="Brazil" />
+            
+            <div>
+                <div class="label-group">
+                <label for="start">Start Date</label>
+                <input type="date" name="start" value="2020-01-10" />
+                </div>
+
+                <div class="label-group">                    
+                <label for="end">End Date</label>
+                <input type="date" name="end" value="2020-01-20" />
+                </div>
+            </div>
+
+            <input type="submit" value="Buy policy" />
+        </form>
+    </div>
+</body>
+</html>
