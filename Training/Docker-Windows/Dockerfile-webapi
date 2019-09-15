@@ -1,0 +1,8 @@
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
+
+# Basic ASP.net dependencies
+#RUN dism.exe /online /enable-feature /all /featurename:iis-webserver /NoRestart
+#RUN powershell add-windowsfeature web-asp-net45 
+
+WORKDIR C:/inetpub/wwwroot
+COPY webapi .
