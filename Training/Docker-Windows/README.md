@@ -52,9 +52,13 @@ This exercise attempts to answer several questions
 
       docker run --publish 18081:80 --detach --rm --isolation process --name api.my.local hello-api
 
+  Observe that these two processes have their own IIS instances, but at the same time are just processes.
+
+    get-process servicemonitor 
 
 ## Exercise 3, set up an entire set of applications
 
+    
 
 ## Exercise 4, edit the website in development mode
 
