@@ -5,4 +5,5 @@ FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
 #RUN powershell add-windowsfeature web-asp-net45 
 
 WORKDIR C:/inetpub/wwwroot
-COPY webapp/default.aspx .
+COPY webapp/ ./
+

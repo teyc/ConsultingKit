@@ -32,9 +32,17 @@ This exercise attempts to answer several questions
 
 ## Exercise 1, setting up a web application
 
+      # builds an 'image' called 'hello-web' that we can spin up
       docker build --tag hello-web --file .\Dockerfile-web .
 
+      # list the images that are cached on the local computer
+      docker image ls
+
+      # spins up the 'hello-web' image in a 'container'
       docker run --publish 18080:80 --detach --rm --isolation process --name web.my.local hello-web
+
+      # lists running containers
+      docker ps
 
       start http://localhost:18080/
 
@@ -46,6 +54,8 @@ This exercise attempts to answer several questions
 
 ## Exercise 3, set up an entire set of applications
 
+
+## Exercise 4, edit the website in development mode
 
 # References
 
