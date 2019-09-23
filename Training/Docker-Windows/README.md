@@ -52,10 +52,30 @@ This exercise attempts to answer several questions
 
       docker run --publish 18081:80 --detach --rm --isolation process --name api.my.local hello-api
 
+
 ## Exercise 3, set up an entire set of applications
 
 
 ## Exercise 4, edit the website in development mode
+
+  Development using docker build can be time consuming, since we will have to build a brand
+  new image each time. We can share a local directory with a running container so that we
+  can keep updating the project until it works.
+
+  First we should stop our existing container.
+
+  List the running processes, find the name of the process we wish to stop
+  
+      docker ps
+
+  Then kill the process
+
+      docker stop web.my.local
+
+  Next start up the container this way
+
+      docker run -v C:\dev\oss\consultingkit\training\docker-windows\webapp:C:\inetpub\wwwroot --publish 18080:80 --detach --rm --isolation process --name web.my.local hello-web
+
 
 # References
 
