@@ -1,4 +1,5 @@
 .\start-traefik-1809.ps1    # starts traefik
+docker run -it --rm --name aspnet --label-file aspnet.label mcr.microsoft.com/dotnet/core/samples:aspnetapp # starts endpoint
+docker run -it --rm --name aspnet2 --label traefik.port=80 mcr.microsoft.com/dotnet/core/samples:aspnetapp # starts endpoint 2
 docker exec -it traefik powershell.exe # shell into running traefik container
-docker run -it --rm --name aspnet --label-file aspnet.label mcr.microsoft.com/dotnet/core/samples:aspnetapp # endpoint
 notepad C:\Windows\System32\Drivers\etc\Hosts # edit HOSTS file
