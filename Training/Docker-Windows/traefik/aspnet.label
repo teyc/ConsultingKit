@@ -1,0 +1,2 @@
+traefik.docker.network=aspnet.docker.localhost
+traefik.port=80
