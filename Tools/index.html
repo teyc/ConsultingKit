@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+        html * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .h1 {
+            font-size: 60pt;
+            font-weight: 700;
+        }
+
+        .h2 {
+            font-size: 24pt;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .h3 {
+            font-size: 18pt;
+            color: #666;
+            font-weight: 700;
+        }
+
+        input,
+        textarea {
+            border: none;
+            color: #444;
+            width: 100%;
+        }
+        
+        input:hover,
+        textarea:hover {
+            border: 1px dashed gray;
+        }
+
+        .fadeIn {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fadeIn">
+        <a class="h1" href="./title.html">Title page</a>
+    </div>
+    <script>
+
+        function updateDate(animate) {
+            var value = Date().toString().replace('(', '\n(');
+            var dateElement = document.getElementById("date");
+            if (animate) {
+                var ms = value.length / 500;
+                for (var i = 0; i < value.length; i++) {
+                    setTimeout(function() {
+                        dateElement.value = value.substring(0, i+1);
+                    }, ms * i)
+                }
+            } else {
+                dateElement.value = value;
+            }
+        }
+        updateDate(true);
+        setInterval(function () {
+            updateDate();
+        }, 1000);
+
+        var projectElement = document.getElementById("project");
+        var projectCookie = document.cookie.split(';').filter(c => c.indexOf('project=') == 0)[0];
+        if (projectCookie) {
+            projectElement.value = projectCookie.split('=')[1];
+        }
+        projectElement.addEventListener("blur", function (e) {
+            document.cookie = "project=" + e.target.value;
+        });
+    </script>
+</body>
+
+</html>

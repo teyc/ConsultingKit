@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+        html * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .h1 {
+            font-size: 60pt;
+            font-weight: 700;
+        }
+
+        .h2 {
+            font-size: 24pt;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .h3 {
+            font-size: 18pt;
+            color: #666;
+            font-weight: 700;
+        }
+
+        input,
+        textarea {
+            border: none;
+            color: #444;
+            width: 100%;
+        }
+
+        input:hover,
+        textarea:hover {
+            border: 1px dashed gray;
+        }
+
+        .fadeIn {
+            animation: fadeIn 3000ms;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+        
+        #startup-message {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="hidden">
+        <!-- <input class="h2" type="text" value="" name="date" /> -->
+        <textarea id="date" class="h2"></textarea>
+        <input class="h1" type="text" placeholder="Project name" id="project" />
+        <input class="h3" placeholder="briefing" />
+    </div>
+    <div id="startup-message">
+        click to go full screen
+    </div>
+    <script src="site.js"></script>
+    <script>
+
+        window.addEventListener("click", function () {
+            document.getElementById('container').className = "fadeIn";
+            document.getElementById('startup-message').className = "hidden";
+            openFullscreen(document.documentElement).then(function () {
+                updateDate(1500, 3000);
+            });
+        });
+
+        var projectElement = document.getElementById("project");
+        var projectCookie = document.cookie.split(';').filter(c => c.indexOf('project=') == 0)[0];
+        if (projectCookie) {
+            projectElement.value = projectCookie.split('=')[1];
+        }
+        projectElement.addEventListener("blur", function (e) {
+            document.cookie = "project=" + e.target.value;
+        });
+
+    </script>
+</body>
+
+</html>
