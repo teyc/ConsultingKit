@@ -56,9 +56,30 @@ This exercise attempts to answer several questions
 
     get-process servicemonitor 
 
-## Exercise 3, set up an entire set of applications
+## Exercise 3, set up SQL Server
 
-    
+  docker run -d -p 1433:1433 -v $PWD/sqlserver:C:\SqlServerTemp --name sqlserver.my.local microsoft/mssql-server-windows-express
+
+Then run a shell, and create the tables, and copy the database to a local directory
+
+    docker exec -it -v $PWD/sqlserver:C:/Temp sqlserver.my.local powershell.exe
+    C:\> sqlcmd -i C:\SqlServerTemp\001_policies_table.sql
+    C:\> copy C:\program files\mssqlserver\mssql.express\sqlserver\data\travel.mdf C:\temp
+    C:\> copy C:\program files\mssqlserver\mssql.express\sqlserver\data\travel_log.ldf C:\temp
+
+This builds a brand new SQL Server image that has a database inside
+
+    docker build -t hello-sql --file .\Dockerfile-sqlserver .
+
+Next we can run the database
+
+    docker run -it --detach --name sqlserver.my.local hello-sql 
+
+## Exercise 4, set up an entire set of applications
+
+  docker stop web.my.local api.my.local
+  
+  docker-compose up
 
 ## Exercise 4, edit the website in development mode
 

@@ -1,0 +1,11 @@
+# docker run -d -p 1433:1433 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e attach_dbs="<DB-JSON-CONFIG>" 
+FROM microsoft/mssql-server-windows-express
+
+COPY ["./sqlserver/travel.mdf",     "C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/MSSQL/DATA/travel.mdf"]
+COPY ["./sqlserver/travel_log.ldf", "C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/MSSQL/DATA/travel_log.ldf"]
+
+ENV attach_dbs='[{ "dbName": "travel", "dbFiles": ["C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/MSSQL/DATA/travel.mdf", "C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/MSSQL/DATA/travel_log.ldf"] }]'
+ENV sa_password secret@password42
+ENV ACCEPT_EULA Y
+
+EXPOSE 1433

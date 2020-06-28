@@ -1,0 +1,6 @@
+docker build -t hello-sql --file .\Dockerfile-sqlserver . # build hello-sql image
+docker run -it hello-sql --name sqlserver.my.local # Sql Server
+docker run -v $PWD\sqlserver:C:\SqlServerTemp\ -d -p 1433:1433 -e ACCEPT_EULA=Y -e "sa_password=pass@word51" --name sqlserver.my.local microsoft/mssql-server-windows-express # sql-server
+docker run -v $PWD\sqlserver:C:\SqlServerTemp\ -e "attach_dbs=[{dbName: 'travel', 'dbFiles': ['C:\\SqlServerTemp\\travel.mdf']}]" -d -p 1433:1433 -e ACCEPT_EULA=Y -e "sa_password=pass@word51" --name sqlserver.my.local microsoft/mssql-server-windows-express # sql-server
+docker run -d -p 18082:80 kristianh/wiki:iis # Runs a Wiki
+docker exec -it sqlserver.my.local powershell.exe # Runs a shell inside running SQL Server container

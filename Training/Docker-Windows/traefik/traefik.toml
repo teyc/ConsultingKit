@@ -1,4 +1,4 @@
 [api]
 [docker]
-  domain = "docker.localhost"
+  domain = "127-0-0-1.nip.io"
   

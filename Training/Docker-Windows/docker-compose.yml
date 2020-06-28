@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    ports:
+      - 18080:80
+    image: hello-web
+    depends_on:
+      - api
+  api:
+    image: hello-api
