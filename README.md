@@ -11,6 +11,11 @@ Project tools for a software consultancy engagement
 - MVP
 - Product ownership
 - Iterative delivery
+- [Heilmeier Catechism](https://github.com/teyc/ConsultingKit/blob/master/ProjectManagement.md#heilmeier-catechism)
+
+### Product Management
+
+- [Presentation template](https://github.com/teyc/ConsultingKit/blob/master/ProjectManagement.md#battle-tested-format-for-presentation)
 
 ## Readings
 - [Contracting 101](http://theengineeringmanager.com/management-101/contracting/)
