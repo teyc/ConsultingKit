@@ -26,7 +26,7 @@ It's battle tested so you get to avoid my earlier mistakes.
 
    Be clear about why you’re there, what are you expecting from them, and what problem are you solving. That’s slide #1.
    
-2. ** What’s the problem you’re solving and why does it matter?**
+2. What’s the **problem** you’re solving and **why does it matter?**
 
    If you can't get people in the room on the same page about why this problem is critical to the company, it's going to be difficult for you to move forward.
 
@@ -37,31 +37,31 @@ It's battle tested so you get to avoid my earlier mistakes.
 
    Make it clear you understand what is our current approach. 
 
-4. W**hat are our competitors or industry leaders doing?**
+4. What are **our competitors or industry leaders** doing?
 
    If other companies in your industry are solving this issue better, highlight that.
 
    This is powerful. Nobody wants to fall behind and highlighting how others are doing better is a powerful motivation to do more. 
 
-5. **What’s your solution?**
+5. What’s your **solution?**
 
    Now that we're clear on the problem and have similar context, what is your solution?
 
    If this is a slight repeat of slide #1, that's okay. You want to highlight it within the context you've just provided. 
 
-6. **What's the cost?**
+6. What's the **cost?**
 
    Solutions cost money and resources. What are you asking for? You want to be clear and articulate about the overall cost of this solution.
 
    This is not just about money, it’s about the overall cost of time, possible change of direction, resourcing, etc. 
 
-7. **What’s the cost of inaction?**
+7. What’s the **cost of inaction?**
 
    Do *not* skip this part.
 
    There is a cost to doing nothing. This is a killer way to showcase how the cost of doing something is *better* than the cost of doing what we're doing today or to not improve. 
 
-8. **What’s your high-level execution plan?**
+8. What’s your **high-level execution plan?**
 
    Depending on who you're presenting to, you might not have to show too much detail here.
 
