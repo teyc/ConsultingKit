@@ -25,3 +25,6 @@ Project tools for a software consultancy engagement
 - [Foundations of Software Engineering](https://cmu-313.github.io/)
 - [The Phoenix Checklist](https://www.amazon.com.au/Phoenix-Checklist-Turning-Problems-Solutions-ebook/dp/B00J6GSLT6)
 
+### Handbooks
+
+- https://posthog.com/handbook
