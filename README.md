@@ -24,6 +24,7 @@ Project tools for a software consultancy engagement
 - [Founder to CEO](https://docs.google.com/document/d/1ZJZbv4J6FZ8Dnb0JuMhJxTnwl-dwqx5xl0s65DE3wO8/preview#heading=h.pdmqf3646hgt)
 - [Foundations of Software Engineering](https://cmu-313.github.io/)
 - [The Phoenix Checklist](https://www.amazon.com.au/Phoenix-Checklist-Turning-Problems-Solutions-ebook/dp/B00J6GSLT6)
+- [Communicating like a grown up - Carl Braun](https://fs.blog/carl-braun-communicating/)
 
 ### Handbooks
 
